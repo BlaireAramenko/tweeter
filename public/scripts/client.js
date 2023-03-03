@@ -97,16 +97,19 @@ const createTweetElement = function (tweet) {
 
   let $tweet = $(`
     <article class="tweet">
-      <header>
-        <img src="${tweet.user.avatars}" alt="${tweet.user.name}'s avatar">
-        <h3>${tweet.user.name}</h3>
-        <p class="username">${tweet.user.handle}</p>
+      <header class="tweet-header">
+        <div class="tweet-avatar-name"> 
+          <img src=${tweet.user.avatars} alt=${tweet.user.name} />
+          <h3>${tweet.user.name}</h3>
+        </div>
+        <p>${tweet.user.handle}</p>
       </header>
       <div class="tweet-content">
         <p>${tweet.content.text}</p>
+        <div class="line"></div>
       </div>
       <footer>
-        <p class="tweet-age">${timeago.format(tweet.created_at)}</p>
+        <p class="tweet-time">${timeago.format(tweet.created_at)}</p>
         <div class="icons">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>

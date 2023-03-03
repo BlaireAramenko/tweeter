@@ -1,5 +1,5 @@
 header.under-nav.my-header {
-  height: 400px;
+  height: 560px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,31 +7,4 @@ header.under-nav.my-header {
   align-items: center;
   background-color: #e5c720;
   background-image: url(http://www.transparenttextures.com/patterns/arches.png);
-}
-
-header.under-nav.my-header > div:first-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*image*/
-header.under-nav.my-header img {
-  width: 170px;
-  height: 170px;
-  align-items: center;
-}
-
-header.under-nav.my-header > div:last-child {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/*name header*/
-header.under-nav.my-header h2 {
-  margin: 10px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #f7f7f7;
-  font-family: sans-serif;
 }

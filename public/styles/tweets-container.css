@@ -1,89 +1,98 @@
-article.tweet {
-  border: 2px solid black;
-  border-radius: 0px;
-  padding: 20px;
-  margin-top: 100px;
-  box-sizing: border-box;
-}
-
-section .tweet header {
-  background-color: #f4f1ec;
-  background-image: none;
-}
-
-
 .tweet {
-  border: 3px solid #ccc;
+  border: 2px solid black;
   width: 100%;
-  margin-top: 20px;
-  padding: 20px;
+  margin: 1rem;
+  padding: 1rem;
+  /* margin-top: 20px; */
+  /* padding: 20px; */
+  /* border-radius: 0px; */
+  /* padding: 20px; */
+  /* margin-top: 100px; */
+  /* box-sizing: border-box; */
 }
 
-.tweet header {
+.tweet-avatar-name {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 1rem; */
+  /* margin: 0.1rem; */
 }
 
-.tweet header img {
+.tweet-header {
+  display: flex;
+  /* background-color: blue; */
+  /* align-items: flex-start; */
+  /* margin: 0.1rem; */
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 0.2rem; */
+  /* background-color: #f4f1ec; */
+  /* background-image: none; */
+}
+
+.tweet-header img {
   width: 50px;
   height: 50px;
-  border-radius: 25%;
-  margin-right: 10px;
-  margin-bottom: 20px;
+  /* border-radius: 25%; */
+  /* margin-right: 10px; */
+  /* margin-bottom: 20px; */
 }
 
-.tweet header h3 {
-  display: block;
+.tweet-header h3 {
+  /* display: block; */
   font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 5em;
+  /* margin-block-start: 1em; */
+  /* margin-block-end: 5em; */
   font-weight: bold;
-  padding-right: 1000px;
-  padding-bottom: 20px;
+  /* padding-right: 1000px; */
+  /* padding-bottom: 20px; */
 }
 
-
-.tweet header p.username {
+.tweet-header p {
   color: gray;
+  /* margin-right: 1rem; */
 }
 
 .tweet-content {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.line {
+  height: 2px;
+  background-color: black;
+  width: 100%;
 }
 
 .tweet-content p {
   display: flex;
-  justify-content: center;
-  padding-bottom: 100px;
-  font-size: 1.5rem;
-  font-family: sans-serif;
-  border-bottom: solid;
+  justify-content: flex-start;
 }
 
-.tweet footer {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0.2rem;
 }
 
-.tweet footer .tweet-age {
+.tweet-time {
   color: gray;
 }
 
-.tweet footer .icons {
+.icons {
   display: flex;
-  justify-content: left;
+  justify-content: center;
+  align-items: center;
 }
 
-.tweet footer .icons i {
+/* .tweet footer .icons i {
   margin-left: 10px;
   color: gray;
   cursor: pointer;
-}
+} */
 
-.tweet footer .icons i:hover {
+.icons i:hover {
   color: red;
 }
 

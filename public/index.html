@@ -21,6 +21,8 @@
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- Tweets-container CSS -->
+  <link rel="stylesheet" href="/styles/tweets-container.css" type="text/css" />
 
   <!-- Nav CSS -->
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -31,8 +33,6 @@
    <!-- New-tweet CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-  <!-- Tweets-container CSS -->
-  <link rel="stylesheet" href="/styles/tweets-container.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -66,27 +66,26 @@
     <div>
         <h2>Your Name</h2>
     </div>
-</header>
+  </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="POST">
+      <form>
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div>
-         <footer> <button type="submit">Tweet</button>
-          <output id="counter" class="counter" for="tweet-text">140</output> </footer>
+         <footer class="new-tweet-footer"> 
+            <button type="submit">Tweet</button>
+            <output id="counter" class="counter" for="tweet-text">140</output> 
+        </footer>
         </div>
-        <div class="error-message"></div>
       </form>
-    </section>
-    <section id="tweets-container">
-      
-
+      <div class="error-message"></div>
     </section>
 
+    <section id="tweets-container"></section>
   </main>
   
 </body>
