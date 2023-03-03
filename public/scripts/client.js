@@ -4,7 +4,24 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const loadTweets = function() {
+  $.ajax({
+    type: 'GET',
+    url: '/tweets/',
+    dataType: 'json',
+    success: function(data) {
+      renderTweets(data);
+    },
+    error: function(xhr, status, error) {
+      console.error('Error fetching tweets:', error);
+    }
+  });
+};
+
+
 $(document).ready(function() {
+  // add loadTweets at top
+  loadTweets();
   $('form').submit(function(event) {
     // prevent default form submission behavior
     event.preventDefault();
@@ -21,6 +38,7 @@ $(document).ready(function() {
       data: serializedData,
       success: function(data) {
         console.log('Tweet posted successfully!');
+        loadTweets(); // reload tweets after successful post
       },
       error: function(xhr, status, error) {
         console.error('Error posting tweet:', error);
@@ -28,6 +46,7 @@ $(document).ready(function() {
     });
   });
 });
+
 
 
 
