@@ -26,7 +26,16 @@ $(document).ready(function() {
     // prevent default form submission behavior
     event.preventDefault();
     // get the tweet text
-    const tweetText = $('#tweet-text').val(); 
+    const tweetText = $('#tweet-text').val();
+    // check if tweet text is empty or exceeds 140 char
+    if (!tweetText) {
+      alert('Uhoh! Tweet cannot be empty');
+      return;
+    }
+    if (tweetText.length > 140) {
+      alert('Uhoh! Tweet content exceeds 140 characters');
+      return;
+    }
     // serialize the form data
     const serializedData = $(this).serialize();
     console.log(serializedData);
