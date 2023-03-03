@@ -7,7 +7,7 @@
 const loadTweets = function() {
   $.ajax({
     type: 'GET',
-    url: '/tweets/',
+    url: '/tweets',
     dataType: 'json',
     success: function(data) {
       renderTweets(data);
@@ -19,10 +19,10 @@ const loadTweets = function() {
 };
 
 
-$(document).ready(function() {
+$(document).ready(function () {
   // add loadTweets at top
   loadTweets();
-  $('form').submit(function(event) {
+  $('form').submit(function (event) {
     // prevent default form submission behavior
     event.preventDefault();
     // get the tweet text
@@ -41,9 +41,10 @@ $(document).ready(function() {
     console.log(serializedData);
 
     // make the AJAX request to the server
+    
     $.ajax({
       type: 'POST',
-      url: '/tweets/',
+      url: '/tweets',
       data: serializedData,
       success: function(data) {
         console.log('Tweet posted successfully!');
@@ -59,7 +60,10 @@ $(document).ready(function() {
 
 
 
-const data = [
+
+
+
+/*const data = [
   {
     "user": {
       "name": "Newton",
@@ -83,11 +87,12 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+] */
 
 
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
+
   let $tweet = $(`
     <article class="tweet">
       <header>
@@ -114,14 +119,22 @@ const createTweetElement = function(tweet) {
 
 
 
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
+  console.log("hello tweet!");
+  // store the list of tweets in the #tweets-container data attribute
+  $('#tweets-container').data('tweets', tweets);
+  // empty the #tweets-container section
+  $('#tweets-container').empty();
+
   // loop through the array of tweets
   for (let tweet of tweets) {
     // create a tweet element using the createTweetElement function
     let $tweet = createTweetElement(tweet);
+    console.log($tweet);
     // append the tweet element to the #tweets-container section
     $('#tweets-container').append($tweet);
   }
+  console.log($('#tweets-container'));
 };
 
-renderTweets(data);
+loadTweets();
