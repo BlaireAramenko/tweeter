@@ -4,6 +4,33 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(function() {
+  $('form').submit(function(event) {
+    // prevent default form submission behavior
+    event.preventDefault();
+    // get the tweet text
+    const tweetText = $('#tweet-text').val(); 
+    // serialize the form data
+    const serializedData = $(this).serialize();
+    console.log(serializedData);
+
+    // make the AJAX request to the server
+    $.ajax({
+      type: 'POST',
+      url: '/tweets/',
+      data: serializedData,
+      success: function(data) {
+        console.log('Tweet posted successfully!');
+      },
+      error: function(xhr, status, error) {
+        console.error('Error posting tweet:', error);
+      }
+    });
+  });
+});
+
+
+
 const data = [
   {
     "user": {
@@ -21,7 +48,8 @@ const data = [
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd"
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
@@ -31,7 +59,7 @@ const data = [
 
 
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   let $tweet = $(`
     <article class="tweet">
       <header>
@@ -58,7 +86,7 @@ const createTweetElement = function (tweet) {
 
 
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   // loop through the array of tweets
   for (let tweet of tweets) {
     // create a tweet element using the createTweetElement function
@@ -69,4 +97,3 @@ const renderTweets = function(tweets) {
 };
 
 renderTweets(data);
-
