@@ -60,6 +60,13 @@ main footer {
   justify-content: space-between;
 }
 
-
+main .new-tweet .error-message {
+  background-color: #f8d7da;
+  border: 1px solid #e21227;
+  color: #e01f33;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: none;
+}
 
 

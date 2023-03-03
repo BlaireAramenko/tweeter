@@ -22,6 +22,8 @@ const loadTweets = function() {
 $(document).ready(function () {
   // add loadTweets at top
   loadTweets();
+  // hide the error message initially
+  $('.error-message').hide();
   $('form').submit(function (event) {
     // prevent default form submission behavior
     event.preventDefault();
@@ -29,11 +31,11 @@ $(document).ready(function () {
     const tweetText = $('#tweet-text').val();
     // check if tweet text is empty or exceeds 140 char
     if (!tweetText) {
-      alert('Uhoh! Tweet cannot be empty');
+      $('.error-message').text('Please write something').show();
       return;
     }
     if (tweetText.length > 140) {
-      alert('Uhoh! Tweet content exceeds 140 characters');
+      $('.error-message').text('Tweet cannot exceed 140 characters!').show();
       return;
     }
     // serialize the form data
