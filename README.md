@@ -12,3 +12,23 @@ This project consists of HTML, CSS, JS, jQuery and AJAX on the front-end, and No
 ## Tweeter Navigation and Tweet Box 
 
 ![Tweeter project homepage](https://github.com/BlaireAramenko/tweeter/blob/master/images/tweeter-project.png)
+
+## Example Tweets 
+
+Each tweet contains the user's name, avatar, and handle. The tweet body contains the tweet text. The footer displays how long ago the tweet was created as well as the "Flag", "Re-tweet", and "Like" icons.
+
+![Tweeter project tweets](https://github.com/BlaireAramenko/tweeter/blob/master/images/tweets.png)
+
+## Icon Hover 
+
+When the user hovers over an icon, the icon turns red. Additionally, when the user hovers over a tweet, the tweet displays a box shadow.
+
+![Icon hover](https://github.com/BlaireAramenko/tweeter/blob/master/images/icon-hover.png)
+
+## Error Messages
+
+When a user submits a tweet that contains more than 140 characters, an error message is displayed. Furthermore, the character counter turns red when more than 140 characters have been typed, and it shows how many characters over the 140 limit have been typed. 
+
+![Exceed character count](https://github.com/BlaireAramenko/tweeter/blob/master/images/error-message1.png)
+
+![Input missing](https://github.com/BlaireAramenko/tweeter/blob/master/images/error-message2.png)
