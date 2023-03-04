@@ -31,6 +31,6 @@ When a user submits a tweet that contains more than 140 characters, an error mes
 
 ![Exceed character count](https://github.com/BlaireAramenko/tweeter/blob/master/images/error-message1.png)
 
-When a user submits a tweet without writing naything, an error message is displayed. 
+When a user submits a tweet without writing anything, an error message is displayed. 
 
 ![Input missing](https://github.com/BlaireAramenko/tweeter/blob/master/images/error-message2.png)
