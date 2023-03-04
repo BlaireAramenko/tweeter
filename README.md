@@ -8,3 +8,7 @@ This project consists of HTML, CSS, JS, jQuery and AJAX on the front-end, and No
 
 - Express
 - Node 5.10.x or above
+
+## Tweeter Navigation and Tweet Box 
+
+![Tweeter project homepage](https://github.com/BlaireAramenko/tweeter/blob/master/images/tweeter-project.png)
