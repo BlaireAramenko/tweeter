@@ -37,25 +37,51 @@ main {
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 768px) {
-  .feature {
+@media only screen and (max-width: 768px) {
+  #tweets-container .tweet{
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  /* .feature {
     width: 33.3%;
     line-height: 600px;
-  }
+  } */
 
-  .content {
+  /* .content {
     width: 66.7%;
     float: right
   }
 
   .footer {
     clear: right;
-  }
+  } */
 }
 
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
-  .hero {
+
+  .main-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 15rem;
+  }
+
+  header.under-nav.my-header {
+    height: 400px !important;
+    width: 400px !important;
+  }
+
+  .under-nav.my-header img {
+    height: 200px;
+  }
+
+  .container {
+    width: 50%;
+  }
+  /* .hero {
     width: 33.3%;
     float: left;
   }
@@ -83,5 +109,5 @@ main {
     max-width: 1024px;
     font-size: 16px;
     margin: 0 auto;
-  }
+  } */
 }
