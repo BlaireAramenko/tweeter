@@ -105,8 +105,8 @@ const renderTweets = function(tweets) {
     // create a tweet element using the createTweetElement function
     let $tweet = createTweetElement(tweet);
     console.log($tweet);
-    // append the tweet element to the #tweets-container section
-    $('#tweets-container').append($tweet);
+    // prepend the tweet element to the #tweets-container section
+    $('#tweets-container').prepend($tweet);
   }
   console.log($('#tweets-container'));
 };
