@@ -4,15 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const loadTweets = function() {
+const loadTweets = function () {
   $.ajax({
     type: 'GET',
     url: '/tweets',
     dataType: 'json',
-    success: function(data) {
+    success: function (data) {
       renderTweets(data);
     },
-    error: function(xhr, status, error) {
+    error: function (xhr, status, error) {
       console.error('Error fetching tweets:', error);
     }
   });
@@ -43,16 +43,19 @@ $(document).ready(function () {
     console.log(serializedData);
 
     // make the AJAX request to the server
-    
+
     $.ajax({
       type: 'POST',
       url: '/tweets',
       data: serializedData,
-      success: function(data) {
+      success: function (data) {
         console.log('Tweet posted successfully!');
         loadTweets(); // reload tweets after successful post
+        // clear the tweet input field and reset the character counter
+        $('#tweet-text').val('');
+        $('.counter').text('140');
       },
-      error: function(xhr, status, error) {
+      error: function (xhr, status, error) {
         console.error('Error posting tweet:', error);
       }
     });
@@ -93,7 +96,7 @@ const createTweetElement = function (tweet) {
 
 
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   console.log("hello tweet!");
   // store the list of tweets in the #tweets-container data attribute
   $('#tweets-container').data('tweets', tweets);
@@ -110,5 +113,7 @@ const renderTweets = function(tweets) {
   }
   console.log($('#tweets-container'));
 };
+
+
 
 loadTweets();
