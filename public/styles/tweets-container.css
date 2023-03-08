@@ -42,8 +42,8 @@
 }
 
 .tweet-content p {
-  display: flex;
-  justify-content: flex-start;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 footer {
